@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/121fa70939.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheet link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.svg">
+
+    <!-- Scrool animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>ThreeDot</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar blur">
+        <div class="navbar-container" id="navBar-container">
+            <!-- Navbar Menu, Logo, Search conatiner -->
+            <div class="navbar-menu-logo-search">
+                <!-- Menu, Cross Icon -->
+                <div class="menu-cross">
+                    <i class="bi bi-list" id="menuIcon" onclick="openMenu()"></i>
+                    <i class="bi bi-x" id="closeIcon" onclick="closeMenu()" style="display: none;"></i>
+                </div>
+
+                <!-- Navbar brand logo -->
+                <a href="#home" class="navbar-brand-logo" id="navBar-brand-logo">
+                    <svg width="1901" height="278" viewBox="0 0 1901 278" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="brand-logo">
+                        <path d="M25.5 25.5H109.25H193M109.25 252.5V139V97.25" stroke="white" stroke-width="50"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M263 25V138.5V252M424 138.5V25V252M328.5 138.5H358.625" stroke="white"
+                            stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M494 252V138.5V110.125V103.75M494 25H608.628C640.038 25 665.5 50.4622 665.5 81.8715V81.8715C665.5 113.281 640.038 138.743 608.628 138.743H563L635.727 219.102C654.684 240.049 681.618 252 709.871 252H890.5"
+                            stroke="white" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M736 26H889M889 137.5H736" stroke="white" stroke-width="50" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M960.5 141H1113.5M1113.5 252.5H960.5" stroke="white" stroke-width="50"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M961 25H1227.5C1290.18 25 1341 75.8157 1341 138.5V138.5C1341 201.184 1290.18 252 1227.5 252H1187.03M1187.03 99.6848V181.16"
+                            stroke="white" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M1411 138.5C1411 201.184 1461.82 252 1524.5 252C1587.18 252 1638 201.184 1638 138.5C1638 75.8157 1587.18 25 1524.5 25C1461.82 25 1411 75.8157 1411 138.5Z"
+                            stroke="white" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M1708 25H1791.75H1875.5M1791.75 252V138.5V96.75" stroke="white" stroke-width="50"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <!-- <img src="./assets/images/navbar_logo_white.svg" alt="ThreeDot logo" class="brand-logo"> -->
+                </a>
+
+                <!-- <a href="#home" class="navbar-brand-logo" id="navBar-brand-logo">
+                    <img src="./assets/images/navbar_logo_white.svg" alt="ThreeDot logo" class="brand-logo">
+                </a> -->
+
+
+                <!-- Search icon -->
+                <a href="#search" class="searchIcon" id="searchIcon" onclick="openSearch()">
+                    <i class="bi bi-search"></i>
+                </a>
+
+            </div>
+
+            <!-- Navigation items -->
+            <div class="navbar-lists">
+                <div class="nav-list-items" id="nav-list-items">
+                    <p class="navbar-list-items" id="list1">
+                        <a href="#products" class="navbar-item-links" id="item1">Products</a>
+                    </p>
+                    <p class="navbar-list-items" id="list2">
+                        <a href="#services" class="navbar-item-links" id="item2">Services</a>
+                    </p>
+                    <p class="navbar-list-items" id="list3">
+                        <a href="about.html" class="navbar-item-links" id="item3">About</a>
+                    </p>
+                    <p class="navbar-list-items" id="list4">
+                        <a href="#contact" class="navbar-item-links" id="item4">Contact us</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Search Form with Input Field -->
+        <div id="search-container" class="search-container">
+            <span class="searchIcon-inside-form">
+                <i class="bi bi-search"></i>
+            </span>
+
+            <div class="search-form">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search ThreeDot.in" name="search" autocomplete="off">
+                </form>
+            </div>
+            <span class="closeIcon" id="closeIcon" onclick="closeSearch()">
+                <i class="bi bi-x"></i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- About ThreeDot -->
+    <div class="about-container">
+
+        <div class="blob-animation-container">
+            <div class="blobs">
+                <!-- Blob 1 -->
+                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+                    filter="blur(0px)" style="opacity: 1;" class="blob">
+                    <path id="blob" fill="url(#gradient)" style="opacity: 1;">
+                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                            values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+                        </animate>
+                    </path>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(255, 245, 0);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(255, 199, 0);"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg> -->
+
+                <!-- Blob 2 -->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+                    style="opacity: 1;" class="blob">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(178, 122, 255);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(106, 81, 195);"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path id="blob" fill="url(#gradient)" style="opacity: 1;">
+                        <animate attributeName="d" dur="10s" repeatCount="indefinite"
+                            values="M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M425.57934,323.79599Q426.22734,397.59197,355.10104,419.41516Q283.97474,441.23834,222.29242,423.00907Q160.6101,404.77979,95.49644,367.33031Q30.38277,329.88083,44.58128,255.13536Q58.77979,180.3899,99.7419,120.41159Q140.70401,60.43329,214.57221,45.49287Q288.44042,30.55246,350.61367,72.29792Q412.78692,114.04339,418.85914,182.0217Q424.93135,250,425.57934,323.79599Z;M443.46373,322.92581Q424.06453,395.85162,352.29275,408.54192Q280.52096,421.23222,209.43547,432.55323Q138.34998,443.87423,108.93547,378.01696Q79.52096,312.15968,50.50966,239.62741Q21.49835,167.09515,80.22256,112.52096Q138.94677,57.94677,211.78709,57.03792Q284.62741,56.12906,342.97339,89.43146Q401.31936,122.73387,432.09114,186.36693Q462.86293,250,443.46373,322.92581Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M404.21696,312.89783Q400.5999,375.79567,344.18719,420.60848Q287.77447,465.42129,222.25959,438.51488Q156.7447,411.60848,114.36806,363.06382Q71.99143,314.51917,65.98083,247.80853Q59.97023,181.09788,105.72982,130.10217Q151.4894,79.10645,216.18088,77.25959Q280.87235,75.41272,335.88295,103.82341Q390.89355,132.2341,399.36378,191.11705Q407.83401,250,404.21696,312.89783Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z">
+                        </animate>
+                    </path>
+                </svg>
+
+                <!-- Blob 3 -->
+                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
+                    filter="blur(0px)" style="opacity: 1;" class="blob">
+                    <path id="blob" fill="url(#gradient)" style="opacity: 1;">
+                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                            values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+                        </animate>
+                    </path>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(76, 224, 221);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(67, 199, 193);"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg> -->
+
+            </div>
+        </div>
+
+        
+        <!-- ThreeDot Logo -->
+        <div class="about-logo-container">
+            <img src="./assets/images/threedot_white.svg" alt="ThreeDot Logo">
+        </div>
+
+        <!-- ThreeDot contents -->
+        <div class="about-content-container">
+            <p class="contents"><strong>ThreeDot</strong> is a software-based startup company, headquartered at
+                <span>Guwahati</span>, <span>India</span>. Founded by <span>Hasan Al Saeed</span>, <span>Rakibul
+                    Islam</span> & <span>Mahbubur Rahman</span>. The company has
+                succesfully deployed many works related to softwares. We have various softwares to provide to our
+                clients who needs to manage a <span>laboratory</span>, <span>school</span>, <span>hotel</span> etc. Our
+                focus is on the best possible user
+                experience with modern day <span>UI/UX</span> techniques for smooth running of customers’ businesses.
+                <br>
+                <br>
+                Be it of <span>Web Development</span>, <span>Web Design</span>, <span>App Development</span>,
+                <span>UI/UX Design</span> or even for someone who wants to
+                learn <span>Programming</span> from our best programmers having many years of industry experiences, you
+                can contact
+                us to meet up your requirements.
+            </p>
+
+            <button class="contact-btn"><span>Develop for me &#187;</span></button>
+        </div>
+    </div>
+
+    <!-- ThreeDot Office Address, Location -->
+    <div class="address-container mt-2">
+        <div class="about-address">
+            <h3 class="address-title">Our Office</h3>
+            <p class="location">47, Nagarjhar<br>Thana Road, Howly<br>Barpeta, Assam, India<br>781316</p>
+        </div>
+
+        <div class="office-building">
+            <img src="./assets/images/office_building.svg" alt="Office Building illustration" class="building">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer mt-2">
+        <div class="footer-container">
+            <!-- Remarks details section -->
+            <!-- <div class="remarks-container">
+                <p class="remarks-text">&#167;<sup>1</sup>. Video by <a
+                        href="https://www.pexels.com/video/changes-in-form-and-appearance-of-a-submerged-material-3163534/"
+                        target="_blank">GamOl</a>, hosted by <a href="https://www.pexels.com/"
+                        target="_blank">Pexels.com</a></p>
+                <p class="remarks-text">&#167;<sup>2</sup>. The app name and the app image shown are for representing
+                    purpose only. Actual app name and app image may vary.</p>
+            </div> -->
+
+            <!-- Horizontal line -->
+            <!-- <hr> -->
+
+            <div class="extra-container">
+                <!-- Each Extra links -->
+                <div class="extra-conatiner-items">
+                    <ul class="extra-list">
+                        <li class="extra-list-head">Shop & Explore</li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">LaMaApp</a>
+                        </li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">SchMgSoft</a>
+                        </li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">HotMg</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Each Extra links -->
+                <div class="extra-conatiner-items">
+                    <ul class="extra-list">
+                        <li class="extra-list-head">Services</li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Chat with us</a>
+                        </li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Email us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Each Extra links -->
+                <div class="extra-conatiner-items">
+                    <ul class="extra-list">
+                        <li class="extra-list-head">Account</li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Manage your purchases</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Each Extra links -->
+                <div class="extra-conatiner-items">
+                    <ul class="extra-list">
+                        <li class="extra-list-head">About ThreeDot</li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Updates</a>
+                        </li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Investors</a>
+                        </li>
+                        <li class="extra-list-items">
+                            <a href="#lamaapp">Contact ThreeDot</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Horizontal line -->
+            <hr>
+
+            <div class="copyright-social-privacy-container">
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>Copyright © 2022 ThreeDot. All rights reserved.</p>
+                </div>
+
+
+                <!-- privacy policy container -->
+                <div class="privacy-policy">
+                    <ul class="privacy-lists">
+                        <li class="privacy-list-item">
+                            <a href="#home" class="border-right">Privacy Policy</a>
+                        </li>
+
+                        <li class="privacy-list-item">
+                            <a href="#home" class="border-right">Terms of Use</a>
+                        </li>
+
+                        <li class="privacy-list-item">
+                            <a href="#home">Sales Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social-Media handles -->
+                <div class="social-container">
+                    <a href="https://github.com/" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/in.ThreeDot" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/ThreeDot_in" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/threedot-in/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/threedot.in/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="app.js" type="text/javascript"></script>
+
+</body>
+
+</html>
